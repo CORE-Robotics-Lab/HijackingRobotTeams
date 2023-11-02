@@ -1,6 +1,6 @@
 # Hijacking Robot Teams Through Adversarial Communication
 
-This is the code for our submitted paper [`Hijacking Robot Teams Through Adversarial Communication`]([url](https://openreview.net/pdf?id=bIvIUNH9VQ)) to CoRL 2023.
+This is the code for our submitted paper [`Hijacking Robot Teams Through Adversarial Communication`](https://openreview.net/pdf?id=bIvIUNH9VQ) to CoRL 2023.
 
 The main code to train the adversarial policy is `run_adv_comm_offpolicy` function in `main_heterogeneous.py`. It will:
 
@@ -21,3 +21,4 @@ Please cite our paper with the following format if you find it help:
   booktitle={7th Annual Conference on Robot Learning},
   year={2023}
 }
+```
