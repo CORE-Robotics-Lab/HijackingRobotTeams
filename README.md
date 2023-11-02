@@ -1,6 +1,6 @@
 # Hijacking Robot Teams Through Adversarial Communication
 
-This is the code for our submitted paper [`Hijacking Robot Teams Through Adversarial Communication`](https://openreview.net/pdf?id=bIvIUNH9VQ) to CoRL 2023.
+This is the code for submitted paper [`Hijacking Robot Teams Through Adversarial Communication`](https://openreview.net/pdf?id=bIvIUNH9VQ) presented as an Oral talk at CoRL 2023.
 
 **Author**: Zixuan Wu, Sean Ye, Byeolyi Han and Matthew Gombolay
 
@@ -8,9 +8,11 @@ The main code to train the adversarial policy is `run_adv_comm_offpolicy` functi
 
 * Load your pre-trained agent policies in folder `saved_models` .
 
-* Train surrogate policies to mimic them and adversarial communication policies offline.
+* Trains surrogate policies to mimic them and adversarial communication policies offline.
 
-* Automatically create a folder named `models` to save the trained adversarial policies as checkpoints.
+* Automatically creates a folder named `models` to save the trained adversarial policies as checkpoints.
+
+The conda environment for running the code can be created using: `conda env create -f environment.yml`. 
 
 This work is still on-going and we will continue refining this repo - the next step includes to train a defender or mainipulate the attacked agents to anywhere we want.
 
