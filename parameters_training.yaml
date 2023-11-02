@@ -1,0 +1,34 @@
+environment:
+  env_id: benchmark_env/Predator-Capture-Prey (PCP) # Name of environment
+  model_name: adv_comm # We are training adversarial policy
+  seed: 2 # Random seed
+  debug_mode: False # Print some debug informations
+  adversary_env: fixed_prey # random_prey #random_prey # store_true
+
+train:
+  n_rollout_threads: 1
+  n_training_threads: 16 # Training thread if not using CUDA
+  buffer_length: 1048576 
+  fixed_length: 0 # We do not rotate first fixed_length data in the buffer
+  n_episodes:  50001 # Adversarial policy training + testing visualization episodes
+  advcomm_n_episodes: 40001 # Adversarial policy training episodes
+  flip_mode: flip # Decide the flipping mode, flip or direct?
+  save_gif: False # Decide if we save gifs in the training
+  episode_length: 100 # Timesteps in each episode
+  batch_size: 1024 # Batch size for policy training
+  n_exploration_eps: 30001 # How many exploration steps we have in the training?
+  init_noise_scale: 0.6 # Decide the start noise scale which is linearly decaying
+  final_noise_scale: 0.0
+  save_interval: 500 # How often we save the model?
+  hidden_dim: 128 # Hidden size of our actor-critic structure
+  lr: 0.0003 # learning rate
+  tau: 0.01 # Smooth coef for MADDPG/DDPG target critc/policy
+  gamma: 0.9 # Reward discounted factor
+  agent_alg: MADDPG # We are using MADDPG/DDPG to train
+  adversary_alg: MADDPG # We are using MADDPG/DDPG to train
+  discrete_action: True # We are using discrete actions
+  fps: 100 # Frame rate when saving gif
+  continue: True # Agents deployed with pretrained policy
+  continue_start_episode: 0 # Start training from episode 0
+  ag_checkpoint: ./saved_models/PCP/model.pt # Load agent policy 
+  comm_checkpoint: ./saved_models/PCP/comm_model.pt # Load adversarial policy
