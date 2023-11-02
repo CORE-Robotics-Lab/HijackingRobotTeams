@@ -6,13 +6,25 @@ This is the code for our submitted paper [`Hijacking Robot Teams Through Adversa
 
 The main code to train the adversarial policy is `run_adv_comm_offpolicy` function in `main_heterogeneous.py`. It will:
 
-* Load the pre-trained policy in folder `saved_models` .
+* Load your pre-trained agent policies in folder `saved_models` .
 
 * Train surrogate policies to mimic them and adversarial communication policies offline.
 
 * Automatically create a folder named `models` to save the trained adversarial policies as checkpoints.
 
 This work is still on-going and we will continue refining this repo - the next step includes to train a defender or mainipulate the attacked agents to anywhere we want.
+
+This code is adapted from the `Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments (MADDPG)` [code](https://github.com/shariqiqbal2810/maddpg-pytorch) with the citation:
+
+```c
+@article{lowe2017multi,
+  title={Multi-agent actor-critic for mixed cooperative-competitive environments},
+  author={Lowe, Ryan and Wu, Yi I and Tamar, Aviv and Harb, Jean and Pieter Abbeel, OpenAI and Mordatch, Igor},
+  journal={Advances in neural information processing systems},
+  volume={30},
+  year={2017}
+}
+```
 
 Please cite our paper with the following format if you find it help:
 
