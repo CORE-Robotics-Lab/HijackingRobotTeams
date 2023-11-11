@@ -12,6 +12,7 @@ train:
   fixed_length: 0 # We do not rotate first fixed_length data in the buffer
   n_episodes:  50001 # Adversarial policy training + testing visualization episodes
   advcomm_n_episodes: 40001 # Adversarial policy training episodes
+  agent_policy_n_episodes: 25001 # Agent MADDPG decentralized policy training episodes
   flip_mode: flip # Decide the flipping mode, flip or direct?
   save_gif: False # Decide if we save gifs in the training
   episode_length: 100 # Timesteps in each episode
