@@ -6,7 +6,7 @@ This is the code for our submitted paper [`Hijacking Robot Teams Through Adversa
 
 The main code to train the adversarial policy is `run_adv_comm_offpolicy` function in `main_heterogeneous.py`. It will:
 
-* Load your pre-trained agent policies (MADDPG ones can be trained with base_policy.py) in folder `saved_models`.
+* Load your pre-trained agent policies (MADDPG ones can be trained with `base_policy.py`) in folder `saved_models`.
 
 * Trains surrogate policies to mimic them and adversarial communication policies offline.
 
