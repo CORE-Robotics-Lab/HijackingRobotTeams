@@ -121,7 +121,7 @@ def run_base_policy(config):
             torch_obs = [Variable(torch.Tensor(np.vstack(obs[:, i])),
                                   requires_grad=False).to(device_train)
                          for i in range(maddpg.nagents)] # torch_obs: [torch.Size([1, 16]),torch.Size([1, 16]),torch.Size([1, 16]),torch.Size([1, 16])]
-            torch_agent_actions = maddpg.step(torch_obs, explore=False)
+            torch_agent_actions = maddpg.step(torch_obs, explore=True)
             agent_actions = [ac.data.cpu().numpy() for ac in torch_agent_actions]
             actions = [[ac[i] for ac in agent_actions] for i in range(config["train"]["n_rollout_threads"])] 
             if ep_i % config["train"]["save_interval"] == 0 and config["train"]["save_gif"]:
